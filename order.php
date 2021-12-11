@@ -52,10 +52,10 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
     $mail->Body = $message;
     //$mail->Body = "<h1>This is HTML h1 Heading</h1></br><p>This is html paragraph</p>";
     //Add recipient
-    $mail->addAddress('ap4471@srmist.edu.in');
+    $mail->addAddress('ak2494@srmist.edu.in');
     //Finally send email
     if ($mail->send()) {
-        header('Location: confirm.html');
+        header('Location: confirm.php');
     } else {
         echo "Message could not be sent. Mailer Error";
     }
