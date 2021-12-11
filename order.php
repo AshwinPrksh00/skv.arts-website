@@ -10,6 +10,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+
+
+
 if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && isset($_POST['paint']) && isset($_POST['desc'])) {
     // $stmt = $pdo->prepare('INSERT INTO orders ( name, phno, addr, paint, description ) VALUES (:na, :ph, :ad, :pa, :dc)');
     // $stmt->execute(
@@ -48,7 +51,7 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
     //Attachment
     //$mail->addAttachment('img/attachment.png');
     //Email body
-    $message = "Name: " . $_POST['name'] . "\nPhone Number: " . $_POST['phno'] . "\nEmail Address: " . $_POST['addr'] . "\nPainting Style: " . $_POST['paint'] . "\nDescription: " . $_POST['desc'];
+    $message = "Name: " . $_POST['name'] . "\nPhone Number: " . $_POST['phno'] . "\nEmail Address: " . $_POST['addr'] . "\nPainting Style: " . $_POST['paint'] . "\nSize: " . $_POST['selected']. "\nDescription: " . $_POST['desc'] ;
     $mail->Body = $message;
     //$mail->Body = "<h1>This is HTML h1 Heading</h1></br><p>This is html paragraph</p>";
     //Add recipient
@@ -125,8 +128,8 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
                 <div class="form-input CANVAS">
                     <label for="size">Canvas Size</label>
                     <div class="can-size">
-                        <div class="size-a4">A4</div>
-                        <div class="size-a3">A3</div>
+                        <div class="size-a4">A4 <input class="input-a4" type="hidden" name="" value="a4"></div>
+                        <div class="size-a3">A3 <input class="input-a3" type="hidden" name="" value="a4"></div>
                     </div>
                 </div>
 
@@ -152,6 +155,8 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
         canvas.style.display = "none";
         var canvaa3 = document.getElementsByClassName('size-a3')[0];
         var canvaa4 = document.getElementsByClassName('size-a4')[0];
+        var a4input = document.getElementsByClassName('input-a4')[0];
+        var a3input = document.getElementsByClassName('input-a3')[0];
 
         canvaa3.addEventListener('click', () => {
             canvaa3.style.borderColor = "#f44336";
@@ -160,6 +165,8 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
             canvaa4.style.borderColor = "#fff";
             canvaa4.style.color = "#fff";
             canvaa4.style.boxShadow = "none";
+            a3input.setAttribute('name', 'selected');
+            a4input.removeAttribute('name');
         })
 
         canvaa4.addEventListener('click', () => {
@@ -169,6 +176,8 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
             canvaa3.style.borderColor = "#fff";
             canvaa3.style.color = "#fff";
             canvaa3.style.boxShadow = "none";
+            a4input.setAttribute('name', 'selected');
+            a3input.removeAttribute('name');
         })
 
         select.addEventListener('click', () => {
