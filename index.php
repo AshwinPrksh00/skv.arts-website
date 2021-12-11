@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SKVArts - The passionné d'art</title>
+    <link rel="icon" href="./assets/icons/S.png" type="image/x-icon">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,26 +54,26 @@
     <!-----Part2----->
 
     <section class="campus">
-        <h1>Courses we Offer</h1>
+        <h1>Styles we Offer</h1>
         <p>Motorola says Hello Moto with new spot featuring Moto Z family.</p>
 
         <div class="row">
             <div class="campus-col">
-                <img src="css/jocker.jpeg">
+                <img src="assets\107.jpeg">
                 <div class="layer">
                     <h3>JOKER</h3>
                 </div>
             </div>
 
             <div class="campus-col">
-                <img src="css/kobe.png">
+                <img src="assets\images\kobe.png">
                 <div class="layer">
                     <h3>KOBE</h3>
                 </div>
             </div>
 
             <div class="campus-col">
-                <img src="css/jocker.jpeg">
+                <img src="assets\107.jpeg">
                 <div class="layer">
                     <h3>JOKER</h3>
                 </div>
@@ -87,7 +89,7 @@
 
     <section class="part3">
         <div class="cources">
-            <h1>Courses we Offer</h1>
+            <h1>Styles we Offer</h1>
             <p>Motorola says Hello Moto with new spot from Ogilvy featuring Moto Z family.</p>
 
             <div class="row">
@@ -115,7 +117,7 @@
     <!-----Part4----->
     <section class="facilities">
 
-        <h1>Courses we Offer</h1>
+        <h1>Sizes we Offer</h1>
         <p>Motorola says Hello Moto with Z family.</p>
 
         <div class="row">

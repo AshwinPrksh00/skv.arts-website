@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Me</title>
+    <link rel="icon" href="./assets/icons/S.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,25 +16,19 @@
 </head>
 
 <body>
-    <section class="sub-header">
-        <nav>
-            <a class="title" href="index.php">SKV</a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="catogery.php">GALLERY</a></li>
-                    <li><a href="about.php">ABOUT</a></li>
-                    <li><a href="order.php">ORDER</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
 
+    <?php include "navbar.php"; ?>
+    <div class="paint-video">
+        <img src="assets/images/about_background.jpg" alt="moon">
         <h1>About Me</h1>
-    </section>
+    </div>
+
 
     <!-----About us Content----->
+
+    <!-- <video width="320" height="240" autoplay muted loop id="myVideo">
+        <source src="assets/images/starry_night_anim.mp4" type="video/mp4">
+    </video> -->
 
     <section class="about-us">
         <div class="row">
@@ -57,7 +52,7 @@
 
 
     <!-----Footer----->
-    
+
     <?php include("footer.php"); ?>
 
     <!-----x--Footer--x----->
