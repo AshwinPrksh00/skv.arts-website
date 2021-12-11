@@ -7,35 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-    <section class="sub-header-general">
-        <nav>
-            <a class="title" href="index.html">SKV</a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="catogery.html">GALLERY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="order.php">ORDER</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
 
-
-
-    </section>
-
+    <?php include "navbar.php"; ?>
 
     <div class="container">
         <div class="heading">
@@ -71,17 +51,7 @@
 
     <!-----Footer----->
 
-    <section class="footer">
-
-        <div class="icons">
-            <a href="https://www.instagram.com/skv.arts/"><i class="fa fa-instagram"></i></a>
-            <a href="https://m.facebook.com/profile.php?id=100018278464932&ref=content_filter"><i
-                    class="fa fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/suminder-kaur-01756b21b"><i class="fa fa-linkedin"></i></a>
-            <a href="https://twitter.com/SuminderKaur15?t=PUSSJxjCqYVfQ6LVC3giww&s=08"><i class="fa fa-twitter"></i></a>
-        </div>
-
-    </section>
+    <?php include("footer.php"); ?>
 
     <!-----x--Footer--x----->
 
@@ -93,6 +63,7 @@
             navLinks.style.right = "0";
             navsection.style.overflow = "visible";
         }
+
         function hideMenu() {
             navLinks.style.right = "-250px";
             setTimeout('navsection.style.overflow = "hidden";', 1000);

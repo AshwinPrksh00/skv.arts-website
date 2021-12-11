@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <section class="header">
         <nav>
@@ -24,9 +26,9 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="catogery.html">GALLERY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="catogery.php">GALLERY</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
                     <li><a href="order.php">ORDER</a></li>
                 </ul>
             </div>
@@ -43,70 +45,70 @@
             <span></span>
             <!-- <span></span>
             <span></span> -->
-        
+
         </div>
     </section>
 
     <!-----Part2----->
 
-        <section class="campus">
-            <h1>Courses we Offer</h1>
-            <p>Motorola says Hello Moto with new spot featuring Moto Z family.</p>
-        
-            <div class="row">
-                <div class="campus-col">
-                    <img src="css/jocker.jpeg">
-                    <div class="layer">
-                        <h3>JOKER</h3>
-                    </div>
-                </div>
-        
-                <div class="campus-col">
-                    <img src="css/kobe.png">
-                    <div class="layer">
-                        <h3>KOBE</h3>
-                    </div>
-                </div>
-        
-                <div class="campus-col">
-                    <img src="css/jocker.jpeg">
-                    <div class="layer">
-                        <h3>JOKER</h3>
-                    </div>
+    <section class="campus">
+        <h1>Courses we Offer</h1>
+        <p>Motorola says Hello Moto with new spot featuring Moto Z family.</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="css/jocker.jpeg">
+                <div class="layer">
+                    <h3>JOKER</h3>
                 </div>
             </div>
-        
-        </section>
+
+            <div class="campus-col">
+                <img src="css/kobe.png">
+                <div class="layer">
+                    <h3>KOBE</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="css/jocker.jpeg">
+                <div class="layer">
+                    <h3>JOKER</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
     <!-----x--Part2--x----->
 
     <!-----Part3----->
 
-        <section class="part3">
-            <div class="cources">
-                <h1>Courses we Offer</h1>
-                <p>Motorola says Hello Moto with new spot from Ogilvy featuring Moto Z family.</p>
-        
-                <div class="row">
-                    <div class="cource-col">
-                        <h3>Russian</h3>
-                        <p>Motorola is continuing its commercial that features the shareability of its Moto Z family.</p>
-                    </div>
-        
-                    <div class="cource-col">
-                        <h3>Asian</h3>
-                        <p>Motorola is continuing its commercial that features the shareability of its Moto Z family.</p>
-                    </div>
-        
-                    <div class="cource-col">
-                        <h3>Latin</h3>
-                        <p>Motorola is continuing its commercial that features the shareability of its Moto Z family.</p>
-                    </div>
+    <section class="part3">
+        <div class="cources">
+            <h1>Courses we Offer</h1>
+            <p>Motorola says Hello Moto with new spot from Ogilvy featuring Moto Z family.</p>
+
+            <div class="row">
+                <div class="cource-col">
+                    <h3>Russian</h3>
+                    <p>Motorola is continuing its commercial that features the shareability of its Moto Z family.</p>
+                </div>
+
+                <div class="cource-col">
+                    <h3>Asian</h3>
+                    <p>Motorola is continuing its commercial that features the shareability of its Moto Z family.</p>
+                </div>
+
+                <div class="cource-col">
+                    <h3>Latin</h3>
+                    <p>Motorola is continuing its commercial that features the shareability of its Moto Z family.</p>
                 </div>
             </div>
-        
-        </section>
+        </div>
+
+    </section>
 
     <!-----x--Part3--x----->
 
@@ -114,11 +116,11 @@
     <section class="facilities">
 
         <h1>Courses we Offer</h1>
-        <p>Motorola says Hello Moto with  Z family.</p>
+        <p>Motorola says Hello Moto with Z family.</p>
 
         <div class="row">
             <div class="facilities-col">
-                <img src="css/dp.jpg" >
+                <img src="css/dp.jpg">
                 <h3>Potrait</h3>
                 <p>Motorola says Hello Moto with new spot featuring Moto Z family.</p>
             </div>
@@ -143,37 +145,35 @@
 
     <!-----Footer----->
 
-    <section class="footer">
-        <div class="icons">
-            <a href="https://www.instagram.com/skv.arts/"><i class="fa fa-instagram"></i></a>
-            <a href="https://m.facebook.com/profile.php?id=100018278464932&ref=content_filter"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/suminder-kaur-01756b21b"><i class="fa fa-linkedin"></i></a>
-            <a href="https://twitter.com/SuminderKaur15?t=PUSSJxjCqYVfQ6LVC3giww&s=08"><i class="fa fa-twitter"></i></a>
-        </div>
-    
-    </section>
+    <?php include("footer.php"); ?>
 
     <!-----x--Footer--x----->
     <script>
         var navLinks = document.getElementById("navLinks");
         var name = document.getElementById("name-text");
         var arrow = document.querySelector('.arrow span');
-        arrow.addEventListener("click", ()=>{
-            document.querySelector('.campus').scrollIntoView({behavior: "smooth", inline: "nearest"});
+        arrow.addEventListener("click", () => {
+            document.querySelector('.campus').scrollIntoView({
+                behavior: "smooth",
+                inline: "nearest"
+            });
         })
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if(isMobile){
+        if (isMobile) {
             name.innerHTML = "Suminder<br>Kaur<br>Vahra";
         }
-        function showMenu(){
+
+        function showMenu() {
             navLinks.style.display = 'inline-block';
             navLinks.style.right = "0";
-            
+
         }
+
         function hideMenu() {
             navLinks.style.right = "-250px";
             // navLinks.style.display = 'none';
         }
     </script>
 </body>
+
 </html>

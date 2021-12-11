@@ -1,29 +1,68 @@
 <?php
-    require_once "pdo.php";
-    if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && isset($_POST['paint']) && isset($_POST['desc'])) {
-        $stmt = $pdo->prepare('INSERT INTO orders ( name, phno, addr, paint, description ) VALUES (:na, :ph, :ad, :pa, :dc)');
-        $stmt->execute(array(
-                ':na' => $_POST['name'],
-                ':ph' => $_POST['phno'],
-                ':ad' => $_POST['addr'],
-                ':pa' => $_POST['paint'],
-                ':dc' => $_POST['desc'])
-        );
+//require_once "pdo.php";
 
-        $to = "ak2494@gmail.com";
-        $subject = "Order";
-        $message = "Name: ".$_POST['name']."\nPhone Number: ".$_POST['phno']."\nEmail Address: ". $_POST['addr']."\nPainting Style". $_POST['paint']."\nDescription: ". $_POST['desc'];
-        $from = "kumarayush2418@gmail.com";
-        $header = "From : $from";
+//Include required PHPMailer files
+require 'includes/PHPMailer.php';
+require 'includes/SMTP.php';
+require 'includes/Exception.php';
+//Define name spaces
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-        if(mail($to, $subject, $message, $header)){
-            echo "Mail Sent";
-            header('Location: index.html');
-            return;
-        }else{
-            echo "Error";
-        }
+if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && isset($_POST['paint']) && isset($_POST['desc'])) {
+    // $stmt = $pdo->prepare('INSERT INTO orders ( name, phno, addr, paint, description ) VALUES (:na, :ph, :ad, :pa, :dc)');
+    // $stmt->execute(
+    //     array(
+    //         ':na' => $_POST['name'],
+    //         ':ph' => $_POST['phno'],
+    //         ':ad' => $_POST['addr'],
+    //         ':pa' => $_POST['paint'],
+    //         ':dc' => $_POST['desc']
+    //     )
+    // );
+
+
+    //Create instance of PHPMailer
+    $mail = new PHPMailer();
+    //Set mailer to use smtp
+    $mail->isSMTP();
+    //Define smtp host
+    $mail->Host = "smtp.gmail.com";
+    //Enable smtp authentication
+    $mail->SMTPAuth = true;
+    //Set smtp encryption type (ssl/tls)
+    $mail->SMTPSecure = "tls";
+    //Port to connect smtp
+    $mail->Port = "587";
+    //Set gmail username
+    $mail->Username = "robsmith12011990@gmail.com";
+    //Set gmail password
+    $mail->Password = "skv@1234";
+    //Email subject
+    $mail->Subject = "Test email using PHPMailer";
+    //Set sender email
+    $mail->setFrom('robsmith12011990@gmail.com');
+    //Enable HTML
+    //$mail->isHTML(true);
+    //Attachment
+    //$mail->addAttachment('img/attachment.png');
+    //Email body
+    $message = "Name: " . $_POST['name'] . "\nPhone Number: " . $_POST['phno'] . "\nEmail Address: " . $_POST['addr'] . "\nPainting Style: " . $_POST['paint'] . "\nDescription: " . $_POST['desc'];
+    $mail->Body = $message;
+    //$mail->Body = "<h1>This is HTML h1 Heading</h1></br><p>This is html paragraph</p>";
+    //Add recipient
+    $mail->addAddress('ap4471@srmist.edu.in');
+    //Finally send email
+    if ($mail->send()) {
+        header('Location: confirm.html');
+    } else {
+        echo "Message could not be sent. Mailer Error";
     }
+
+    //Closing smtp connection
+    $mail->smtpClose();
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,30 +77,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <section class="sub-header-general">
-        <nav>
-            <a class="title" href="index.html">SKV</a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="catogery.html">GALLERY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="order.php">ORDER</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
 
-
-
-    </section>
+    <?php include "navbar.php"; ?>
 
     <section class="order-part">
         <div class="order-box">
@@ -120,15 +142,7 @@
 
     <!-----Footer----->
 
-    <section class="footer">
-        <div class="icons">
-            <a href="https://www.instagram.com/skv.arts/"><i class="fa fa-instagram"></i></a>
-            <a href="https://m.facebook.com/profile.php?id=100018278464932&ref=content_filter"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/suminder-kaur-01756b21b"><i class="fa fa-linkedin"></i></a>
-            <a href="https://twitter.com/SuminderKaur15?t=PUSSJxjCqYVfQ6LVC3giww&s=08"><i class="fa fa-twitter"></i></a>
-        </div>
-
-    </section>
+    <?php include("footer.php"); ?>
 
     <!-----x--Footer--x----->
     <script>
