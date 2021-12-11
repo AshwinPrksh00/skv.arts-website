@@ -22,7 +22,7 @@
 <body>
     <section class="header">
         <nav>
-            <a class="title" href="index.html">SKV</a>
+            <a class="title" href="index.php">SKV</a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>

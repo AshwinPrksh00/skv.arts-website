@@ -17,7 +17,7 @@
 <body>
     <section class="sub-header">
         <nav>
-            <a class="title" href="index.html">SKV</a>
+            <a class="title" href="index.php">SKV</a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -30,7 +30,7 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
-        <h1>About Us</h1>
+        <h1>About Me</h1>
     </section>
 
     <!-----About us Content----->

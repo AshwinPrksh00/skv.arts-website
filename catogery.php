@@ -76,15 +76,15 @@
         var cat = document.querySelectorAll('.img-box');
         cat[0].addEventListener("click", () => {
             // console.log(cat[0].innerHTML);
-            window.location.href = "gallery1.html";
+            window.location.href = "gallery1.php";
         })
         cat[1].addEventListener("click", () => {
             // console.log(cat[1].innerHTML);
-            window.location.href = "gallery2.html";
+            window.location.href = "gallery2.php";
         })
         cat[2].addEventListener("click", () => {
             // console.log(cat[2].innerHTML);
-            window.location.href = "gallery3.html";
+            window.location.href = "gallery3.php";
         })
     </script>
 </body>
