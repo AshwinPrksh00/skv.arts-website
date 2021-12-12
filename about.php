@@ -18,19 +18,16 @@
 <body>
 
     <?php include "navbar.php"; ?>
-    <div class="paint-video">
-        <img src="assets/images/about_background.jpg" alt="moon">
-        <h1>About Me</h1>
-    </div>
 
 
     <!-----About us Content----->
 
-    <!-- <video width="320" height="240" autoplay muted loop id="myVideo">
-        <source src="assets/images/starry_night_anim.mp4" type="video/mp4">
-    </video> -->
 
     <section class="about-us">
+        <div class="paint-video">
+            <img src="assets/images/about_background.jpg" alt="moon">
+            <h1>About Me</h1>
+        </div>
         <div class="row">
             <div class="about-col c1">
                 <img src="assets/images/Profile-pic.jpg">
@@ -58,7 +55,7 @@
     <!-----x--Footer--x----->
     <script>
         var navLinks = document.getElementById("navLinks");
-        var navsection = document.getElementsByClassName('sub-header')[0];
+        var navsection = document.getElementsByClassName('sub-header-general')[0];
 
         function showMenu() {
             navLinks.style.right = "0";

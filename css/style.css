@@ -401,18 +401,7 @@ h3{
 
 /*------------About us Page--------------*/
 
-/* .sub-header{
-    height: 45vh;
-    width: 100%;
-    background-color: black;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(background.jpeg); */
-    /* background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}  */
+
 
 .paint-video{
     height: 50vh;
@@ -437,9 +426,7 @@ h3{
     top: 5vh;
     right: 44vw;
 }
-.sub-header h1{
-    margin-top: 60px;
-}
+
 
 .about-us{
     width: 100%;
@@ -480,13 +467,7 @@ h3{
 
 @media (max-width:700px){
 
-    .sub-header{
-    height: 30vh;
-    }
-
-    .sub-header h1{
-        margin-top: 40px;
-    }
+    
 
     .about-col{
         padding: 5px 2px 30px 2px;
