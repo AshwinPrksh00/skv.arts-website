@@ -39,7 +39,7 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
     //Port to connect smtp
     $mail->Port = "587";
     //Set gmail username
-    $mail->Username = "robsmith12011990@gmail.com";
+    $mail->Username = <EXAMPLE EMAIL>;
     //Set gmail password
     $mail->Password = "skv@1234";
     //Email subject
@@ -55,7 +55,7 @@ if (isset($_POST['name']) && isset($_POST['phno']) && isset($_POST['addr']) && i
     $mail->Body = $message;
     //$mail->Body = "<h1>This is HTML h1 Heading</h1></br><p>This is html paragraph</p>";
     //Add recipient
-    $mail->addAddress('suminderkaur15.sk@gmail.com');
+    $mail->addAddress(<SENDER EMAIL>);
     //Finally send email
     if ($mail->send()) {
         header('Location: confirm.php');
